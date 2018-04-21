@@ -1,0 +1,35 @@
+/* GENERAL */
+body {
+    font-family: 'Arial';
+    padding: 0 2%;
+    min-height: 98vh;
+    background: linear-gradient(to bottom right, #ffcc00, #fb2d84);
+}
+
+.center {
+    text-align: center;
+} .margin {
+    margin: 2%;
+}
+/* END OF GENERAL */
+
+/* BUTTON GRADIENT */
+.button_gradient {
+    /*    background: linear-gradient(to bottom right, #ffcc00, #ffdd22);*/
+        background-color: yellow;
+        box-shadow: 10px 10px 48px -15px rgba(0,0,0,0.75);
+        border-radius: 8px;
+        color: white;
+        display: inline-block;
+        font-weight: bold;
+        padding: 1px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .button_gradient span {
+      background: rgb(11,95,145);
+      display: block;
+      padding: 1em 3em;
+      border-radius: 6px;
+    }
+    /* END OF BUTTON GRADIENT */

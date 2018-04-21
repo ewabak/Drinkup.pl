@@ -1,0 +1,83 @@
+/* NAV_BAR */
+nav * {
+    margin-top: 0;
+    padding-top: .3em;
+    margin-bottom: .3em;
+    padding-bottom: .3em;
+}
+nav {
+    padding: 0 1%;
+    line-height: 1em;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+} nav h1.logo {
+    font-size: 2.5em;
+    padding-right: .5em;
+    border-right: 1px solid #074265;
+} nav div {
+    align-self: center;
+    display: inline-flex;
+} nav div p {
+    cursor: pointer;
+    padding: 0 1em;
+} nav .to_left {
+    font-size: 1.3em;
+    flex-grow: 1;
+    padding-left: 1.5em;
+} nav .to_right {
+    font-size: 1.1em;
+} nav .to_right p {
+    padding-top: .3em;
+    padding-bottom: .5em;
+} nav .to_right p:first-child {
+    border-left: 1px solid black;
+}
+/* END OF NAV_BAR*/
+
+/* CONTAINER */
+#container {
+    background-color: rgba(11, 95, 145, 0.95);
+    border-radius: 5px;
+    min-height: 768px;
+} #container #logo {
+    margin: 5% 0 5% 2%;
+    width: 300px;
+    height: 100%;
+    max-height: 600px;
+    float: left;
+    background-image: url('../assets/drink.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#container #content_wrapper {
+    margin-top: 2%;
+    margin-left: 3%;
+    width: 52%;
+    float: left;
+} #container .gradient_wrapper {
+    width: 100%;
+    background: linear-gradient(to bottom right, #ffcc00, #fb2d84);
+    box-shadow: 10px 10px 48px -15px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 4px;
+    text-decoration: none;
+} #container #content {
+    background: rgb(11,95,145);
+    padding: 1em 3em;
+    border-radius: 6px;
+}
+
+#container #ad {
+    margin: 5% 2% 0 0;
+    float: right;
+    width: 300px;
+    height: 600px;
+    background-color: white;
+}
+/* END OF CONTAINER */
