@@ -13,10 +13,14 @@ nav {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-} nav h1.logo {
+} 
+
+
+nav h1.logo {
     font-size: 2.5em;
     padding-right: .5em;
     border-right: 1px solid #074265;
+    
 } nav div {
     align-self: center;
     display: inline-flex;
@@ -28,7 +32,7 @@ nav {
     flex-grow: 1;
     padding-left: 1.5em;
 } nav .to_right {
-    font-size: 1.1em;
+    font-size: 1.0em;
 } nav .to_right p {
     padding-top: .3em;
     padding-bottom: .5em;
@@ -39,26 +43,32 @@ nav {
 
 /* CONTAINER */
 #container {
-    background-color: rgba(11, 95, 145, 0.95);
+    background-color: #074265;
     border-radius: 5px;
     min-height: 768px;
-} #container #logo {
+}
+#containerBox {     /*containerBox - na okienka */
+        background-color: #074265;                  /*DODAĆ ŻEBY BYŁO PRZEŹROCZYSTE */
+        border-radius: 5px;
+        min-height: auto;
+}
+ #container #logo {
     margin: 5% 0 5% 2%;
     width: 20%;
     height: 600px;
     float: left;
-    background-image: url('../assets/drink.png');
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#container #content_wrapper {
+#containerBox #content_wrapper {
     margin-top: 4%;
     width: 600px;
     min-width: 50%;
     float: left;
-} #container .gradient_wrapper {
+} #containerBox .gradient_wrapper {
     width: 100%;
     background: linear-gradient(to bottom right, #ffcc00, #fb2d84);
     box-shadow: 10px 10px 48px -15px rgba(0,0,0,0.75);
@@ -66,8 +76,8 @@ nav {
     display: inline-block;
     padding: 4px;
     text-decoration: none;
-} #container #content {
-    background: rgb(11,95,145);
+} #containerBox #content {
+    background: #074265;
     padding: 1em 3em;
     border-radius: 6px;
 }
@@ -80,3 +90,34 @@ nav {
     background-color: white;
 }
 /* END OF CONTAINER */
+
+/* FONTS */
+#containerBox .heading1 {
+    font-family: 'Helvetica';
+    font-weight:bold;
+    font-style:normal;
+    font-size:26px;
+    text-align:center;
+    color: white;
+}
+#containerBox .heading2 {
+    font-family: 'Helvetica';
+    font-style:normal;
+    font-size:20px;
+    text-align:left;
+    color: white;
+}
+#containerBox .heading3 {
+    font-family: 'Helvetica';
+    font-style:normal;
+    font-size:16px;
+    color: white;
+}
+/* POSITION */
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
