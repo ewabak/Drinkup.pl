@@ -1,0 +1,41 @@
+<!--
+<div>
+    <button (click)="loginGoogle()" class="google">Login with Google</button>
+    <button routerLink="/email-login" class="email">Email</button>
+    <a routerLink="/signup" routerLinkActive="active" class="create-account-txt">No Account? <strong>Create one here</strong></a>
+  </div>
+-->
+
+<div id='containerBox'>
+  <div id='content_wrapper'>
+    <div class='gradient_wrapper'>
+      <section id='content'>
+  
+        <div class='heading1'><p>Zaloguj się</p></div>
+  
+          <div class="row">
+
+            <div class="column">
+              <p class="heading2">Za pomocą konta Google</p>
+              <div align="center"><input type="image" src="assets/google.png" name="google"  (click)="loginGoogle()" /></div>  
+            </div>
+
+            <div class="column">
+              <p class="heading2">Za pomocą adresu e-mail</p>
+              <button routerLink="/email-login" class="email">Email</button>
+            </div>
+          </div> 
+
+          <div style="text-align: center">
+              <br><a class="heading3" routerLink="/signup" routerLinkActive="active">Nie masz konta? <strong>Zarejestruj się</strong></a>
+          </div>
+      </section>
+    </div>
+  
+          <div class='center margin'>
+            <button class='button_gradient center'><span>ZALOGUJ</span></button>
+          </div>
+    
+  </div>
+</div>
+  

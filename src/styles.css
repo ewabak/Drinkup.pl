@@ -1,6 +1,6 @@
 /* GENERAL */
 body {
-    font-family: 'Arial';
+    font-family: 'Helvetica';
     padding: 0 2%;
     min-height: 98vh;
     background: linear-gradient(to bottom right, #ffcc00, #fb2d84);
@@ -27,9 +27,14 @@ body {
         cursor: pointer;
     }
     .button_gradient span {
-      background: rgb(11,95,145);
+      background: #074265;
       display: block;
       padding: 1em 3em;
       border-radius: 6px;
     }
     /* END OF BUTTON GRADIENT */
+
+
+     
+
+     

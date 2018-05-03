@@ -1,32 +1,28 @@
 <nav>
-  <h1 class='logo'>Drink up!</h1>
+    <img src="assets/logotyp.png" height="45"/>
+
+  <!-- <h1 class='logo'>Drink up!</h1> -->
+
   <div class='to_left'>
-      <p>strona główna</p>
-      <p>profil</p>
-      <p>ulubione</p>
+    <p routerLink="homepage">strona główna</p>
+    <p routerLink="profile">profil</p>
+    <p>ulubione</p>
   </div>
   
   <div class='to_right'>
-      <p>zaloguj się</p>
-      <p>o projekcie</p>
-      <p>[en]</p>
+    <p routerLink="login">zaloguj się</p>
+    <p>o projekcie</p>
+    <p>[en]</p>
   </div>
 </nav>
 
 <div id='container'>
-  <div id='logo'></div>
-  <div id='content_wrapper'>
-      
-      <!-- <router-outlet></router-outlet> -->
-      
-<!--                usunąć szablon -->
-      <div class='gradient_wrapper'>
-          <section id='content'>W tej sekcji będzie coś<br>na pewno.<br>na pewno.<br>na pewno.<br>na pewno.<br>na pewno.</section>
-      </div>
-      <div class='center margin'>
-          <button class='button_gradient center'><span>ZALOGUJ</span></button>
-      </div>
-<!--                aż do tego miejsca -->
-  </div>
-  <aside id='ad'></aside>
-</div>
+    <div id='logo'></div>
+
+    <div id='content_wrapper'>
+
+        <router-outlet></router-outlet>
+        <!-- poniżej <router-outlet> pojawia się to co jest pod podstroną-->
+          </div>
+         <aside id='ad'></aside>
+        </div>
