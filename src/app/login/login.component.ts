@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { browser } from 'protractor';
 
 @Component({
   selector: 'app-login',

@@ -7,6 +7,41 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAWEdrQOJ8hp1H-_IUyfrXlas32aUo065I",
+      authDomain: "drink-up-1524767130276.firebaseapp.com",
+      databaseURL: "https://drink-up-1524767130276.firebaseio.com",
+      projectId: "drink-up-1524767130276",
+      storageBucket: "drink-up-1524767130276.appspot.com",
+      messagingSenderId: "861899942727"
+    };
+    firebase.initializeApp(config);
+  </script>
+  
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.css" />
+  <script type="text/javascript">
+    // FirebaseUI config.
+    var uiConfig = {
+      signInSuccessUrl: '/homepage',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      ],
+      // Terms of service url.
+      tosUrl: '/homepage'
+    };
+  
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
 </head>
 <body>
   <app-root></app-root>
