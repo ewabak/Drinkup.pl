@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  loginGoogle() {
-    this.authService.googleLogin();
-  }
+  // loginGoogle() {
+    // this.authService.googleLogin();
+  // }
   
 }

@@ -1,5 +1,7 @@
 /* GENERAL */
-body {
+* {
+    color: white;
+} body {
     font-family: 'Helvetica';
     padding: 0 2%;
     min-height: 98vh;
@@ -34,7 +36,25 @@ body {
     }
     /* END OF BUTTON GRADIENT */
 
-
-     
-
-     
+/* FONTS */
+#containerBox .heading1 {
+    font-family: 'Helvetica';
+    font-weight:bold;
+    font-style:normal;
+    font-size:26px;
+    text-align:center;
+    color: white;
+}
+#containerBox .heading2 {
+    font-family: 'Helvetica';
+    font-style:normal;
+    font-size:20px;
+    text-align:left;
+    color: white;
+}
+#containerBox .heading3 {
+    font-family: 'Helvetica';
+    font-style:normal;
+    font-size:16px;
+    color: white;
+}

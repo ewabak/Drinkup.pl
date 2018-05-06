@@ -1,16 +1,14 @@
 <nav>
-    <img src="assets/logotyp.png" height="45"/>
-
-  <!-- <h1 class='logo'>Drink up!</h1> -->
+  <img src="assets/logotyp.png" height="45"/>
 
   <div class='to_left'>
     <p routerLink="homepage">strona główna</p>
-    <p routerLink="profile">profil</p>
+    <p routerLink="profile"onclick="location.reload();">profil</p>
     <p>ulubione</p>
   </div>
   
   <div class='to_right'>
-    <p routerLink="login">zaloguj się</p>
+    <p id="sign-in" class='sign-in' routerLink="login"></p>
     <p>o projekcie</p>
     <p>[en]</p>
   </div>
@@ -20,9 +18,16 @@
     <div id='logo'></div>
 
     <div id='content_wrapper'>
-
-        <router-outlet></router-outlet>
-        <!-- poniżej <router-outlet> pojawia się to co jest pod podstroną-->
-          </div>
-         <aside id='ad'></aside>
+        <div id='containerBox'>
+            <div id='content_wrapper'>
+              <div class='gradient_wrapper'>
+                <section id='content'>
+                  <router-outlet></router-outlet>
+                </section>
+              </div>
+            </div>
         </div>
+    </div>
+
+  <aside id='ad'></aside>
+</div>
