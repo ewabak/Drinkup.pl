@@ -14,13 +14,10 @@ export class AppComponent {
   ngOnInit() {
     document.getElementById('sign-in').addEventListener('click', () => {
       var signIn = document.getElementById('sign-in');
-      if (signIn.classList.contains('sign-in')) {
-        signIn.classList.remove('sign-in');
-        location.reload();
-      } else {
-        signIn.classList.add('sign-in');
+      if (signIn.innerHTML == 'wyloguj się' || signIn.innerHTML == 'logout') {
         this.authService.logout();
-        console.log('Signed out');
+      } else {
+        location.reload();
       }
     });
   }
