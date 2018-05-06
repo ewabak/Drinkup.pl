@@ -1,1 +1,67 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Drinkup.Pl</title><base href="https://doberman96.github.io/Drinkup.pl/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.b297bd30a5d8b7bb551c.bundle.css" rel="stylesheet"/></head><body><app-root></app-root><script type="text/javascript" src="inline.318b50c57b4eba3d437b.bundle.js"></script><script type="text/javascript" src="polyfills.b6b2cd0d4c472ac3ac12.bundle.js"></script><script type="text/javascript" src="main.81f7b14677eef18b821a.bundle.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Drinkup.Pl</title><base href="https://doberman96.github.io/Drinkup.pl/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script><script>// Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAWEdrQOJ8hp1H-_IUyfrXlas32aUo065I",
+      authDomain: "drink-up-1524767130276.firebaseapp.com",
+      databaseURL: "https://drink-up-1524767130276.firebaseio.com",
+      projectId: "drink-up-1524767130276",
+      storageBucket: "drink-up-1524767130276.appspot.com",
+      messagingSenderId: "861899942727"
+    };
+    firebase.initializeApp(config);</script><script src="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.js"></script><link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.css"/><script type="text/javascript">// FirebaseUI config.
+    var uiConfig = {
+      signInSuccessUrl: '/homepage',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      ],
+      // Terms of service url.
+      tosUrl: '/homepage'
+    };
+  
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);</script><script type="text/javascript">initApp = function() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        var uid = user.uid;
+        var phoneNumber = user.phoneNumber;
+        var providerData = user.providerData;
+        user.getIdToken().then(function(accessToken) {
+          // document.getElementById('sign-in-status').textContent = 'zalogowano';
+          document.getElementById('sign-in').textContent = 'wyloguj się';
+          if (document.getElementById('account-details')) {
+            document.getElementById('account-details').textContent = JSON.stringify({
+            displayName: displayName,
+            email: email,
+            emailVerified: emailVerified,
+            phoneNumber: phoneNumber,
+            photoURL: photoURL,
+            uid: uid,
+            accessToken: accessToken,
+            providerData: providerData
+          }, null, '  ');
+          }
+        });
+      } else {
+        // User is signed out.
+        // document.getElementById('sign-in-status').textContent = 'wylogowano';
+        document.getElementById('sign-in').textContent = 'zaloguj się';
+        if (document.getElementById('account-details')) {
+          document.getElementById('account-details').textContent = 'null';
+        }
+      }
+    }, function(error) {
+      console.log(error);
+    });
+  };
+
+  window.addEventListener('load', function() {
+    initApp()
+  });</script><link href="styles.b2f1a5776c0faf466c95.bundle.css" rel="stylesheet"/></head><body><!-- <h1>Welcome to My Awesome App</h1> --><!-- <div id="sign-in-status"></div> --><!-- <div id="sign-in"></div> --><!-- <div id="account-details"></div> --><app-root></app-root><script type="text/javascript" src="inline.318b50c57b4eba3d437b.bundle.js"></script><script type="text/javascript" src="polyfills.b6b2cd0d4c472ac3ac12.bundle.js"></script><script type="text/javascript" src="main.09dbed81aa4b0fa11781.bundle.js"></script></body></html>
