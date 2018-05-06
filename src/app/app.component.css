@@ -39,6 +39,19 @@ nav h1.logo {
 } nav .to_right p:first-child {
     border-left: 1px solid black;
 }
+
+@media only screen and (max-width: 1364px) {
+    nav {
+        align-items: center;
+        flex-direction: column;
+    } nav h1.logo {
+        margin-top: 1.5%;
+        border: 0;
+        padding-right: 0;
+    } nav .to_right p:first-child {
+        border: 0;
+    }
+}
 /* END OF NAV_BAR*/
 
 /* CONTAINER */
@@ -63,7 +76,15 @@ nav h1.logo {
     background-repeat: no-repeat;
 }
 
-#containerBox #content_wrapper {
+@media only screen and (max-width:1364px) {
+    #container {
+        border-radius: 0;
+    } #container #logo {
+        display: none;
+    }
+}
+
+#container #content_wrapper {
     margin-top: 4%;
     width: 600px;
     min-width: 50%;
@@ -80,14 +101,21 @@ nav h1.logo {
     background: #074265;
     padding: 1em 3em;
     border-radius: 6px;
-}
-
-#container #ad {
+} #container #ad {
     margin: 7% 2% 0 0;
     float: right;
     width: 300px;
     height: 600px;
     background-color: white;
+}
+
+@media only screen and (max-width:1364px) {
+    #container #content_wrapper {
+        margin-left: .1%;
+        width: 99%;
+    } #container #ad {
+        display: none;
+    }
 }
 /* END OF CONTAINER */
 
