@@ -4,7 +4,8 @@
 } body {
     font-family: 'Helvetica';
     padding: 0 2%;
-    min-height: 98vh;
+    height: 100vh;
+    overflow: hidden;
     background: linear-gradient(to bottom right, #ffcc00, #fb2d84);
 }
 
@@ -25,7 +26,6 @@
 
 /* BUTTON GRADIENT */
 .button_gradient {
-    /*    background: linear-gradient(to bottom right, #ffcc00, #ffdd22);*/
         background-color: yellow;
         box-shadow: 10px 10px 48px -15px rgba(0,0,0,0.75);
         border-radius: 8px;
@@ -42,7 +42,7 @@
       padding: 1em 3em;
       border-radius: 6px;
     }
-    /* END OF BUTTON GRADIENT */
+/* END OF BUTTON GRADIENT */
 
 /* FONTS */
 #containerBox .heading1 {
@@ -66,3 +66,39 @@
     font-size:16px;
     color: white;
 }
+
+#content {
+    height: 500px;
+    max-height: 68vh;
+    overflow: scroll;
+} #content::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* DRINKS LIST */
+#drinks_list .drink {
+    display: flex;
+    justify-content: space-around;
+    height: 180px;
+    padding: 1em;
+    margin: .5em 0;
+    border-radius: 6px;
+    box-shadow: 10px 10px 48px -15px rgba(0,0,0,0.75);
+    background-color: #053b5a;
+    cursor: pointer;
+    transition: background .2s;
+    clear: both;
+} #drinks_list .drink:hover {
+    background-color: #094466;
+} #drinks_list .drink img {
+    width: 180px;
+    height: 180px;
+    margin-right: 1em;
+    object-fit: cover;
+} #drinks_list .drink h2 {
+    font-weight: normal;
+    line-height: 1em;
+    font-size: 1em;
+}
+
+/* END OF DRINKS LIST */
