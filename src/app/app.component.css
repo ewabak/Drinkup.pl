@@ -50,6 +50,8 @@ nav h1.logo {
         padding-right: 0;
     } nav .to_right p:first-child {
         border: 0;
+    } nav .to_left {
+        padding-left: 0;
     }
 }
 /* END OF NAV_BAR*/
@@ -58,14 +60,16 @@ nav h1.logo {
 #container {
     background-color: #074265;
     border-radius: 5px;
-    min-height: 768px;
+    /* min-height: 768px; */
+    height: 88vh;
+    box-shadow: 10px 10px 12px -15px rgba(0,0,0,0.75);
 }
 #containerBox {     /*containerBox - na okienka */
         background-color: #074265;                  /*DODAĆ ŻEBY BYŁO PRZEŹROCZYSTE */
         border-radius: 5px;
-        min-height: auto;
+        /* min-height: auto; */
 }
- #container #logo {
+ /* #container #logo {
     margin: 5% 0 5% 2%;
     width: 20%;
     height: 600px;
@@ -74,7 +78,7 @@ nav h1.logo {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
 @media only screen and (max-width:1364px) {
     #container {
@@ -85,9 +89,10 @@ nav h1.logo {
 }
 
 #container #content_wrapper {
-    margin-top: 4%;
-    width: 600px;
-    min-width: 50%;
+    margin-top: 2%;
+    margin-left: 15%;
+    width: 70%;
+    min-width: 320px;
     float: left;
 } #containerBox .gradient_wrapper {
     width: 100%;
@@ -101,13 +106,14 @@ nav h1.logo {
     background: #074265;
     padding: 1em 3em;
     border-radius: 6px;
-} #container #ad {
+} /* #container #ad {
     margin: 7% 2% 0 0;
     float: right;
     width: 300px;
+    max-width: 20%;
     height: 600px;
     background-color: white;
-}
+} */
 
 @media only screen and (max-width:1364px) {
     #container #content_wrapper {
