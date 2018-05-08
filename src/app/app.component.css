@@ -94,6 +94,7 @@ nav h1.logo {
     width: 70%;
     min-width: 320px;
     float: left;
+    word-wrap: break-word;
 } #containerBox .gradient_wrapper {
     width: 100%;
     background: linear-gradient(to bottom right, #ffcc00, #fb2d84);
