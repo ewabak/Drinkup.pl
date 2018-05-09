@@ -29,7 +29,7 @@ const firebaseConfig = {
     SignupComponent,
     ProfileComponent,
     FavouritesComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
