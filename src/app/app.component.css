@@ -127,11 +127,30 @@ nav h1.logo {
 /* END OF CONTAINER */
 
 /* POSITION */
-.row {
+.author {
+    display: flex;
+    justify-content: flex-start;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .space {
+    margin-left: 10px;
+  }
+
+
+  .row {
     display: flex;
 }
 
-.column {
-    flex: 50%;
+.column1 {
+    flex: 60%;
 }
+.columnspace {
+    flex: 10%;
+}
+.column2 {
+    flex: 30%;
+}
+
 /* END OF POSITION */

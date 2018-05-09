@@ -55,6 +55,7 @@
 }
 #containerBox .heading2 {
     font-family: 'Helvetica';
+    font-weight:bold;
     font-style:normal;
     font-size:20px;
     text-align:left;
