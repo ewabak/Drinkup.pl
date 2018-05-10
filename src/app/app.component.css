@@ -153,4 +153,9 @@ nav h1.logo {
     flex: 30%;
 }
 
+.column {
+    display: flex;
+
+}
+
 /* END OF POSITION */
