@@ -1,59 +1,58 @@
 <div class="row">
   <div class="column">
-  <table>
-    <tr>
-      <td><input type="text" name="search_by_name" placeholder="Wyszukaj drink po nazwie"/></td>
-      <td><img id="search_by_name" src="../../assets/u254.png" alt="szukaj"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="search_by_components" placeholder="Skomponuj swój drink"/></td>
-    </tr>
-  </table>
-  
-  
-  
-  <table class="com">
-    <tr>
-      <td><input type="checkbox"/>Gin</td>
-      <td><input type="checkbox"/>Wódka</td>
-      <td><input type="checkbox"/>Whisky</td>
-      <td><input type="checkbox"/>Rum</td>
-      <td><input type="checkbox"/>Wino</td>
-    </tr>
-    <tr>	
-      <td><input type="checkbox"/>Malibu</td>
-      <td><input type="checkbox"/>Tequilla</td>
-      <td><input type="checkbox"/>Koniak</td>
-      <td><input type="checkbox"/>Burbon</td>
-      <td><input type="checkbox"/>Wermut</td>
-    </tr>
-  </table>
-  
-  <table>
-  <tr>
-    <td>
-      Wyszukaj po typie koktajlu:<br><br>
-      <input type="checkbox">Shot<br>
-      <input type="checkbox">Drink<br>
-      <input type="checkbox">Koktajl<br>
-    </td>
-    <td>
-      Wyszukaj wszystkie drinki:<br><br>
-      <input type="checkbox">Alkoholowe<br>
-      <input type="checkbox">Bezalkoholowe<br><br>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <button id="search_custom_button">
-        <img id="search_custom" src="../../assets/u254.png">
-      </button>
-    </td>
-  </tr>
-  </table>
+    <img src='../../assets/u80.png' id="back_button" (click)="backButtonClicked()" class="hidden">
 
-<button (click)="fetchDrinks()">AJAX</button>
+    <table>
+      <tr class="search1">
+        <td><input type="text" name="search_by_name" #search1 placeholder="Wyszukaj drink po nazwie"/></td>
+        <td><img (click)="searchByName(search1.value, $event)" id="search_by_name" src="../../assets/u254.png" alt="szukaj"></td>
+      </tr>
+      <tr class="search2">
+        <td><input type="text" name="search_by_components" placeholder="Skomponuj swój drink"/></td>
+      </tr>
+    </table>
+    
+    <table class="com search2">
+      <tr>
+        <td><label for="gin">Gin</label><input id="gin" type="radio" class="filter" name="alcohol"/></td>
+        <td><label for="vodka">Wódka</label><input id="vodka" type="radio" class="filter" name="alcohol"/></td>
+        <td><label for="whiskey">Whiskey</label><input id="whiskey" type="radio" class="filter" name="alcohol"/></td>
+        <td><label for="rum">Rum</label><input id="rum" type="radio" class="filter" name="alcohol"/></td>
+        <td><label for="wine">Wino</label><input id="wine" type="radio" class="filter" name="alcohol"/></td>
+      </tr>
+      <tr>	
+        <td><label for="ale">Ale</label><input id="ale" type="radio" class="filter" name="alcohol"/></td>
+        <td><label for="beer">Piwo</label><input id="beer" type="radio" class="filter" name="alcohol"/></td>
+        <td><label for="amaretto">Amaretto</label><input id="amaretto" type="radio" class="filter" name="alcohol"/></td>
+      </tr>
+    </table>
+    
+    <table class="search2">
+    <tr>
+      <td>
+        Wyszukaj po typie koktajlu:<br><br>
+        <input type="checkbox" class="filter">Shot<br>
+        <input type="checkbox" class="filter">Drink<br>
+        <input type="checkbox" class="filter">Koktajl<br>
+      </td>
+      <td>
+        Wyszukaj wszystkie drinki:<br><br>
+        <input type="checkbox" class="filter">Alkoholowe<br>
+        <input type="checkbox" class="filter">Bezalkoholowe<br><br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button id="search_custom_button" (click)="searchByFilters()">
+          <img id="search_custom" src="../../assets/u254.png">
+        </button>
+      </td>
+    </tr>
+    </table>
 
-<div id="drinks_list">
-  <!-- drinks from API are placed here -->
+    <div id="drinks_list">
+      <!-- drinks from API are placed here -->
+    </div>
+
+  </div>
 </div>

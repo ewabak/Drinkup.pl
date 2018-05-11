@@ -36,11 +36,20 @@ img#search_by_name {
     text-align: center;
     width: 30vmax;
     background-color: white;
+} img#back_button {
+    cursor: pointer;
+    height: 2.5em;
 }
 
 table {
+    width: 30em;
 	display: table;
 	border-spacing: 20px;
 	word-spacing: 3px;
 	padding: 10px;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
 }

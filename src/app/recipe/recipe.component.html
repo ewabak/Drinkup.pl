@@ -8,7 +8,7 @@
 
   <div class="column" style="flex: 70%">
 
-    <p style="text-align:center; color: white;">Nazwa drinka</p>
+    <p style="text-align:center; color: white;">drink['strDrink']</p>
 
   </div>  <!-- nazwa -->
 
@@ -24,7 +24,7 @@
 
   <div class="column" style="flex: 30%">
       
-    <input type="image" src="assets/u122.png" style="size: 50%"/>
+    <img src="' + drink['strDrinkThumb'] + '">
 
   </div>
 
@@ -36,7 +36,7 @@
             <option value="składnik ">składnik </option>
             <option value="składnik ">składnik </option>
             <option value="składnik ">składnik </option>
-            <option value="składnik">składnik</option>
+            <option value="składnik ">składnik</option>
             <option value="składnik ">składnik </option>
             <option value="składnik ">składnik </option>
             <option value="składnik ">składnik </option>
@@ -54,7 +54,7 @@
 <div class="row"> <!-- trzeci rząd -->
 
   <div class="column" style="flex: 100%">
-      <textarea style="background-color: #094466; width:550px; height: 200px">przepis</textarea>
+      <textarea style="background-color: #094466; width:550px; height: 200px"><script>drink['strInstructions']</script></textarea>
   </div>
 
 </div>
