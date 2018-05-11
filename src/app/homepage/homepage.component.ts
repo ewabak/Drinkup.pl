@@ -39,9 +39,11 @@ export class HomepageComponent implements OnInit {
   printDrinksToView(drinksArray) {
     var outputDrinks = document.getElementById('drinks_list');
 
+    outputDrinks.innerHTML = '';
+
     if (Array.isArray(drinksArray['drinks'])) {
       drinksArray['drinks'].forEach((drink) => {
-        var outputHTML = '<div class="drink">' +
+        var outputHTML = '<a href="/recipe?i=' + drink['idDrink'] + '">' + '<div class="drink">' +
                             '<img src="' + drink['strDrinkThumb'] + '">' +
                             '<div>' +
                               '<h1>' +
@@ -51,7 +53,9 @@ export class HomepageComponent implements OnInit {
                               drink['strCategory'] +
                               '</h2>' +
                             '</div>' +
-                          '</div>';
+                          '</div>'+
+                          '</a>'
+                          ;
         outputDrinks.innerHTML += outputHTML;
       });
     } else {
@@ -81,14 +85,12 @@ export class HomepageComponent implements OnInit {
     }
 
     var filters = []
-    // var filtersCollection = document.getElementsByClassName('filter');
-    var f = document.querySelectorAll('.filter');
-    for (var i = 0; i < f.length; i++) {
-      // if (f[i].checked) {
-      //   console.log(f[i].checked);
-      //   console.log(f[i].id);
-      //   filters.push(f[i].id);
-      // }
+    var filterRadio = document.getElementsByClassName('filter');
+    for (var i = 0; i < filterRadio.length; i++) {
+      var filterInput = <HTMLInputElement>filterRadio[i];
+      if (filterInput.checked) {
+        filters.push(filterRadio[i].id);
+      }
     }
 
     document.getElementById('back_button').classList.remove('hidden');
